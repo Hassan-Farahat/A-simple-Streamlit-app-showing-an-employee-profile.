@@ -73,5 +73,9 @@ elif section == 'Contact':
 
     message = st.text_area('Message')
 
-    if st.button('Send'):
-         st.success("Thanks for reaching out, I'll be in contact soon")
+    
+if st.button('Send'):
+    if email and phone and linkedin and Discord and message:
+        st.success("Thanks for reaching out, I'll be in contact soon")
+    else:
+        st.error("Please fill in all fields before sending.")
